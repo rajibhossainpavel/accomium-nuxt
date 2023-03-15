@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   auth: {
     isEnabled: true,
     origin: 'http://localhost:3000',
-    basePath: '/api/auth',
+    basePath: '/ams',
     enableSessionRefreshPeriodically: false,
     enableSessionRefreshOnWindowFocus: true,
     enableGlobalAppMiddleware: false,
