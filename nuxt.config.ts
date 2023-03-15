@@ -1,13 +1,22 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    
-      modules: [
-        '@nuxtjs/tailwindcss',
-        '@pinia/nuxt',
-      ],
-      css: [
-        '@/assets/css/main.css',
-      ]
-    
-    
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    '@sidebase/nuxt-auth'
+  ],
+  css: [
+    '@/assets/css/main.css',
+  ],
+  auth: {
+    isEnabled: true,
+    origin: 'http://localhost:3000',
+    basePath: '/api/auth',
+    enableSessionRefreshPeriodically: false,
+    enableSessionRefreshOnWindowFocus: true,
+    enableGlobalAppMiddleware: false,
+    defaultProvider: undefined,
+    globalMiddlewareOptions: {
+      allow404WithoutAuth: true
+    }
+  }
 })
