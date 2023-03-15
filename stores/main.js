@@ -18,7 +18,9 @@ export const useMainStore = defineStore('main', {
     ]
   }),
   actions: {
-    // ...
+    setUser(payload) {
+      return true;
+    },
 
     fetch (sampleDataKey) {
       // axios
