@@ -8,9 +8,9 @@ export default defineNuxtConfig({
     '@/assets/css/main.css',
   ],
   auth: {
-    isEnabled: false,
+    isEnabled: true,
     origin: 'http://localhost:3000',
-    basePath: '/api/auth',
+    basePath: '/ams',
     enableSessionRefreshPeriodically: false,
     enableSessionRefreshOnWindowFocus: true,
     enableGlobalAppMiddleware: false,
@@ -18,5 +18,13 @@ export default defineNuxtConfig({
     globalMiddlewareOptions: {
       allow404WithoutAuth: true
     }
+  },
+  runtimeConfig: {
+    passport: {
+      baseUrl: process.env.PASSPORT_BASE_URL,
+      clientId: process.env.PASSPORT_CLIENT_ID,
+      clientSecret: process.env.PASSPORT_CLIENT_SECRET,
+    }
   }
+
 })
