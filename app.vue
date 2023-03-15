@@ -1,9 +1,6 @@
 <script setup>
 import { useStyleStore } from '@/stores/style.js'
 import { darkModeKey, styleKey } from '@/configs/config.js'
-const pinia = createPinia()
-	app.use(pinia)
-
 
 useHead({
   titleTemplate: (titleChunk) => {
