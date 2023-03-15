@@ -15,7 +15,7 @@ import LineChart from "@/components/Charts/LineChart.vue";
 import SectionMain from "@/components/SectionMain.vue";
 import CardBoxWidget from "@/components/CardBoxWidget.vue";
 import CardBox from "@/components/CardBox.vue";
-import TableSampleClients from "@/components/TableSampleClients.vue";
+import TableSampleClients from "~~/components/-notes/TableSampleClients.vue";
 import NotificationBar from "@/components/NotificationBar.vue";
 import BaseButton from "@/components/BaseButton.vue";
 import CardBoxTransaction from "@/components/CardBoxTransaction.vue";
@@ -36,9 +36,9 @@ onMounted(() => {
 
 const mainStore = useMainStore();
 
-const clientBarItems = computed(() => mainStore.clients.slice(0, 4));
+//const clientBarItems = computed(() => mainStore.clients.slice(0, 4));
 
-const transactionBarItems = computed(() => mainStore.history);
+//const transactionBarItems = computed(() => mainStore.history);
 </script>
 
 <template>
@@ -89,7 +89,7 @@ const transactionBarItems = computed(() => mainStore.history);
         />
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+      <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <div class="flex flex-col justify-between">
           <CardBoxTransaction
             v-for="(transaction, index) in transactionBarItems"
@@ -112,7 +112,7 @@ const transactionBarItems = computed(() => mainStore.history);
             :progress="client.progress"
           />
         </div>
-      </div>
+      </div> -->
 
       <SectionBannerStarOnGitHub class="mt-6 mb-6" />
 

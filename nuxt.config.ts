@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '@/assets/css/main.css',
   ],
   auth: {
-    isEnabled: true,
+    isEnabled: false,
     origin: 'http://localhost:3000',
     basePath: '/api/auth',
     enableSessionRefreshPeriodically: false,
