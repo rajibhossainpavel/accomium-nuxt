@@ -10,13 +10,14 @@ export default defineNuxtConfig({
   auth: {
     isEnabled: true,
     origin: 'http://localhost:3000',
-    basePath: '/ams',
+    basePath: '/api/auth',
     enableSessionRefreshPeriodically: false,
     enableSessionRefreshOnWindowFocus: true,
     enableGlobalAppMiddleware: false,
-    defaultProvider: undefined,
+    defaultProvider: 'passport',
     globalMiddlewareOptions: {
       allow404WithoutAuth: true
+
     }
   },
   runtimeConfig: {
